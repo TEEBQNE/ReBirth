@@ -65,8 +65,8 @@ public class CameraFollow : MonoBehaviour
     void CameraRotation()
     {
         //Get mouse and controller inputs
-        mouseX = Input.GetAxis("MouseXPositive");
-        mouseY = Input.GetAxis("Mouse Vertical");
+        mouseX = Input.GetAxis("Mouse X");
+        mouseY = Input.GetAxis("Mouse Y");
         //Use these comments for controller compatibility (not sure how this works with rewired EDIT:wont work with rewired)
         //float controllerX = Input.GetAxis ("RightStickHorizontal");
         //float controllerZ = Input.GetAxis ("RightStickVertical");
