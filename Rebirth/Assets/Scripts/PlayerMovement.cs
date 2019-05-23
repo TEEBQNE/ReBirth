@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float _speed = 10;
     public int id;
-
+    public float inputSensitivity = 150.0f;
 
     private Player player;
     [HideInInspector] public Rigidbody rb;
@@ -39,8 +39,10 @@ public class PlayerMovement : MonoBehaviour
         float z = player.GetAxis("Move Vertical") * _speed;
 
         float mouseX = Input.GetAxis("Mouse X");
+        //add sensitivity for compatibility with camera
+        float finalMouseX = mouseX*inputSensitivity*Time.deltaTime;
 
-        this.transform.RotateAround(transform.position, transform.up, mouseX);
+        this.transform.RotateAround(transform.position, transform.up, finalMouseX);
 
         isTouchingGround = Physics.Raycast(this.gameObject.transform.position, Vector3.down, out RaycastHit hit, height);
 
