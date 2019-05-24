@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
 	
     //Vars for rotations
 	public float finalInputX;
-	public float finalInputZ;
+	public float finalInputY;
 	public float mouseX;
 	public float mouseY;
 	public float controllerX;
@@ -71,10 +71,10 @@ public class CameraFollow : MonoBehaviour
         //float controllerX = Input.GetAxis ("RightStickHorizontal");
         //float controllerZ = Input.GetAxis ("RightStickVertical");
         finalInputX = /*controllerInputX +*/ mouseX;
-        finalInputZ = /*controllerInputZ +*/ mouseY;
+        finalInputY = -(/*controllerInputZ +*/ mouseY);
 
         //change rotation based on inputs
-        rotX += finalInputZ*inputSensitivity*Time.deltaTime;
+        rotX += finalInputY*inputSensitivity*Time.deltaTime;
         rotY += finalInputX*inputSensitivity*Time.deltaTime;
 
         //Clamp X rotation
