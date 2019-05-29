@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         float x = player.GetAxis("Move Horizontal") * _speed;
         float z = player.GetAxis("Move Vertical") * _speed;
 
-        float mouseX = Input.GetAxis("Mouse X");
+        float mouseX = player.GetAxis("Mouse Horizontal");
         //add sensitivity for compatibility with camera
         float finalMouseX = mouseX*inputSensitivity*Time.deltaTime;
 

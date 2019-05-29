@@ -274,7 +274,7 @@ MonoBehaviour:
   CameraMoveSpeed: 100
   CameraFollowObj: {fileID: 888364226}
   clampAngle: 50
-  inputSensitivity: 150
+  inputSensitivity: 50
   finalInputX: 0
   finalInputY: 0
   mouseX: 0
@@ -749,7 +749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 10
   id: 0
-  inputSensitivity: 150
+  inputSensitivity: 50
   rb: {fileID: 0}
   gravMulti: 1
 --- !u!136 &1600088077
@@ -1475,7 +1475,7 @@ MonoBehaviour:
         _elementType: 0
         _elementIdentifierId: 0
         _axisRange: 0
-        _invert: 1
+        _invert: 0
         _axisContribution: 0
         _keyboardKeyCode: 0
         _modifierKey1: 0
