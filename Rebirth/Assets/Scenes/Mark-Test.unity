@@ -1018,6 +1018,7 @@ GameObject:
   - component: {fileID: 1600088077}
   - component: {fileID: 1600088076}
   - component: {fileID: 1600088081}
+  - component: {fileID: 1600088082}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1133,6 +1134,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1600088082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600088075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1dacbe9f3a08b546ae371889c6c1e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
+  baseDamage: 100
+  fireRate: 0
+  recoil: 0
+  range: 0
+  effectiveRange: 0
+  CritMultiplier: 2
+  cam: {fileID: 1562811841}
+  id: 0
 --- !u!1 &1696824649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,6 +1167,7 @@ GameObject:
   - component: {fileID: 1696824652}
   - component: {fileID: 1696824651}
   - component: {fileID: 1696824650}
+  - component: {fileID: 1696824654}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1225,6 +1248,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1696824654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696824649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d95d37cf6418b2419d747796d877e10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &1742978209
 GameObject:
   m_ObjectHideFlags: 0
