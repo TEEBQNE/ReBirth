@@ -7,12 +7,14 @@ public class Gun : MonoBehaviour
 {	
 	public float damage = 100f;
 	public float baseDamage = 100f;
-	public float fireRate;
+	public float fireRate = 15f;
 	public float recoil;
 	public float range;
 	public float effectiveRange;
 	public float CritMultiplier = 2.0f;
 	public float impactForce;
+
+	private float nextFireTime = 0f;
 
 	public Camera cam;
 
@@ -28,8 +30,9 @@ public class Gun : MonoBehaviour
 			//cam = Camera.main;
 
     		player = ReInput.players.GetPlayer(id);
-        	if (player.GetButtonDown("Fire1"))
+        	if (player.GetButton("Fire1") && Time.time >= nextFireTime)
         	{
+        		nextFireTime = Time.time + 1f/fireRate;
         		Fire1();
         	}
     }

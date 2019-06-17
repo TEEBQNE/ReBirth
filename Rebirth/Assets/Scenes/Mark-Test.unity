@@ -485,7 +485,6 @@ GameObject:
   - component: {fileID: 911969738}
   - component: {fileID: 911969737}
   - component: {fileID: 911969736}
-  - component: {fileID: 911969739}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -565,27 +564,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911969734}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &911969739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911969734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1dacbe9f3a08b546ae371889c6c1e53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100
-  baseDamage: 100
-  fireRate: 0
-  recoil: 0
-  range: 0
-  effectiveRange: 0
-  CritMultiplier: 2
-  cam: {fileID: 1562811841}
-  id: 0
 --- !u!1 &918690437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,13 +1124,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1dacbe9f3a08b546ae371889c6c1e53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
-  baseDamage: 100
-  fireRate: 0
+  damage: 10
+  baseDamage: 10
+  fireRate: 4
   recoil: 0
   range: 0
   effectiveRange: 0
   CritMultiplier: 2
+  impactForce: 0
   cam: {fileID: 1562811841}
   id: 0
 --- !u!1 &1696824649
