@@ -17,14 +17,15 @@ public class Gun : MonoBehaviour
 
 	//Vars for Rewired stuffs
     public int id;
-    private Player player = ReInput.players.GetPlayer(id);
+    public Player player;
 
 
     // Update is called once per frame
     void Update()
     {
-			//cam = Camera.gameObject.GetComponentInChildren<Camera>();
+			//cam = Camera.main;
 
+    		player = ReInput.players.GetPlayer(id);
         	if (player.GetButtonDown("Fire1"))
         	{
         		Fire1();
@@ -35,8 +36,13 @@ public class Gun : MonoBehaviour
 	void Fire1()
 	{
 		RaycastHit hit;
+		/*Ray ray = new Ray();
 
-		if (Physics.Raycast(cam.transform.position, cam.transform.position, out hit))
+		ray.origin = cam.transform.position;
+ 		ray.direction = cam.transform.forward;*/
+
+
+		if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit))
 		{
 			Debug.Log(hit.transform.name);
 
@@ -46,6 +52,7 @@ public class Gun : MonoBehaviour
 				target.TakeDamage(baseDamage);
 			}
 		}
+		//Debug.DrawRay(ray, Color.red);
 
 	}
 
