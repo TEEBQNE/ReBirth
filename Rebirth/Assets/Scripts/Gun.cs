@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
 	public float range;
 	public float effectiveRange;
 	public float CritMultiplier = 2.0f;
+	public float impactForce;
 
 	public Camera cam;
 
@@ -19,6 +20,7 @@ public class Gun : MonoBehaviour
     public int id;
     public Player player;
 
+    //public particleSystem muzzleFlash;
 
     // Update is called once per frame
     void Update()
@@ -36,10 +38,7 @@ public class Gun : MonoBehaviour
 	void Fire1()
 	{
 		RaycastHit hit;
-		/*Ray ray = new Ray();
-
-		ray.origin = cam.transform.position;
- 		ray.direction = cam.transform.forward;*/
+		//muzzleFlash.Play();
 
 
 		if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit))
@@ -51,9 +50,14 @@ public class Gun : MonoBehaviour
 			{
 				target.TakeDamage(baseDamage);
 			}
+			if (hit.rigidbody != null)
+			{
+				hit.rigidbody.AddForce(-hit.normal * impactForce);
+			}
 		}
 		//Debug.DrawRay(ray, Color.red);
-
+		//GameObject impact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+		//Destroy(impact, 2f);
 	}
 
 }
