@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
 
-public class Gun : MonoBehaviour
+public class Shoot : MonoBehaviour
 {    
     public float damage = 100f;
     public float baseDamage = 100f;
