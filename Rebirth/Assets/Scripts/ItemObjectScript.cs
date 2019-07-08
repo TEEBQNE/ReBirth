@@ -39,5 +39,7 @@ public class ItemObjectScript : ScriptableObject
     //mod3 things
     //element? 0 = no element, 1 = fire
     public int element;
+    public float effectChance;
+    public float elementDamage;
 
 }
